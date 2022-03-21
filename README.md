@@ -43,7 +43,7 @@ window.onload = () => {
 
 ### Useful resources
 
-- [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) - This gave me an overview on sessionStorage property and how to manipulate it.
+- [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) - This gave me an overview on the sessionStorage property and how to manipulate it.
 
 ## Author
 - Frontend Mentor - [Rodrick](https://www.frontendmentor.io/profile/Rodrick-alt)
