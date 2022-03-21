@@ -1,38 +1,622 @@
-.App {
-  text-align: center;
+/* BASIC ****************************************************** */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* * {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+} */
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    min-height: 100% !important;
+    height: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+main,
+#root,
+#page-wrapper {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(260, 8%, 14%);
+    /* Very Dark Violet */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#page-wrapper,
+#info-group,
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#page-wrapper {
+    height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* No hover effects on touch ***********************************/
+@media (hover: hover) and (pointer: fine) {
+    .nav-item:hover {
+        color: hsl(260, 8%, 14%);
+    }
+
+    .nav-btn button:hover,
+    #nav-btn button:hover,
+    #banner button:hover,
+    #email-lead button:hover,
+    #submit-btn:hover {
+        background-color: hsl(180, 55%, 75%);
+        /*hsl(180, 66%, 49%)*/
+    }
+
+    .footer-links ul li:hover {
+        color: hsl(180, 66%, 49%);
+    }
+
+    #footer-icons svg:hover {
+        color: hsl(180, 66%, 49%) !important;
+    }
+
+}
+
+/* Button trigger effect */
+button:active {
+    transition: .3s ease-out;
+    transform: scale(.85);
+}
+
+
+/* MOBILE FIRST ******************************************************* */
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 10rem 0 10rem;
+    margin-bottom: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: auto;
+}
+
+#mobile-menu {
+    display: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#menu,
+#menu-open {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+#menu-open {
+    display: block;
+}
+
+#mobile-menu svg {
+    fill: hsl(257, 7%, 63%);
+    /*Grayish Violet*/
+}
+
+#nav-title,
+#footer-title {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.nav-item,
+.nav-item button {
+    font-size: .9rem;
+    font-weight: bold;
+    color: hsl(257, 7%, 63%);
+    /*Grayish Violet*/
+    cursor: pointer;
+}
+
+.nav-item button {
+    font-size: .9rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Button Scheme */
+#nav-btn button,
+#banner button,
+#email-lead button {
+    font-size: .9rem;
+    font-weight: bold;
+    color: white;
+    width: 6rem;
+    height: 2.3rem;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: hsl(180, 66%, 49%);
+    /*Cyan*/
+    cursor: pointer;
+}
+
+#banner button,
+#email-lead button {
+    width: 7.5rem;
+}
+
+#banner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 10rem;
+    margin-bottom: 15rem;
+    gap: 25px;
+    font-size: 1.2rem;
+}
+
+#banner div>* {
+    margin: 15px 0;
+}
+
+#banner-img {
+    max-width: 50%;
+    height: auto;
+}
+
+#banner h1 {
+    font-size: 4.2rem;
+    font-weight: bolder;
+}
+
+#banner p {
+    line-height: 30px;
+    color: hsl(257, 7%, 63%);
+    /*Grayish Violet*/
+}
+
+#banner button,
+#email-lead button {
+    width: 10rem;
+    height: 3rem;
+}
+
+
+#info-group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: #f0f1f6;
+    padding: 5rem 10rem 10rem 10rem;
+}
+
+#shorten-component,
+#card-component {
+    width: 100%;
+}
+
+#shorten-component {
+    position: relative;
+    bottom: 10rem;
+}
+
+
+#cards {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    margin-top: -2rem;
+}
+
+#cards-header {
+    font-size: .9rem;
+    color: hsl(257, 7%, 63%);
+    /*Grayish Violet*/
+    text-align: center;
+}
+
+#cards-header p {
+    line-height: 25px;
+}
+
+#cards-header h2 {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: hsl(260, 8%, 14%);
+    /* Very Dark Violet */
+    margin-bottom: 10px;
+}
+
+#cards-component {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cards-component .card {
+    width: 30%;
+}
+
+.--card1,
+.--card2 {
+    position: relative;
+    top: 2rem;
+}
+
+.--card2 {
+    top: 4rem;
+}
+
+#email-lead {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 14rem;
+    background-image: url(/public/images/bg-boost-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+}
+
+#email-lead h3 {
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    color: white;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-start;
+    padding: 0 10rem 0 10rem;
+    background-color: hsl(260, 8%, 14%);
+}
+
+footer>* {
+    flex: 1 1 auto;
+}
+
+#footer-title {
+    flex-grow: 4;
+}
+
+.footer-links p {
+    font-weight: bold;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    color: hsl(257, 7%, 63%);
+    /*Grayish Violet*/
+}
+
+.footer-links ul li {
+    cursor: pointer;
+}
+
+#footer-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+#footer-icons li {
+    cursor: pointer;
+}
+
+
+/* MEDIA QUERIES ***************************************************** */
+@media only screen and (max-width: 375px) {
+    #banner p br {
+        display: none;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 2rem 1.2rem 0 1.2rem;
+    }
+
+    #banner,
+    #section1,
+    #info-group,
+    footer {
+        padding: 0 1.2rem 0 1.2rem;
+    }
+
+    header,
+    #banner,
+    #shorten-component,
+    #card {
+        max-width: 550px;
+    }
+
+    .nav-item,
+    #nav-btn {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+
+    #banner {
+        flex-flow: row wrap-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10rem;
+        gap: 25px;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    #banner-img {
+        max-width: 100%;
+    }
+
+    #banner h1 {
+        font-size: 2.2rem;
+        line-height: 35px;
+    }
+
+    #banner div {
+        width: 100%;
+    }
+
+
+    #info-group {
+        height: auto;
+        padding-bottom: 7rem;
+    }
+
+    #shorten-component,
+    #card-component {
+        width: 100%;
+    }
+
+    #shorten-component {
+        position: relative;
+        bottom: 5rem;
+    }
+
+    form, form input, form button {
+        width: 100%;
+    }
+
+    .link, .link-open {
+        height: auto;
+        padding: 10px 25px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-open div {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+    }
+
+    #cards {
+        gap: 7rem;
+        margin-top: 4rem;
+    }
+
+    #cards-header {
+        font-size: .9rem;
+        color: hsl(257, 7%, 63%);
+        /*Grayish Violet*/
+        text-align: center;
+    }
+
+    #cards-header p {
+        line-height: 25px;
+    }
+
+    #cards-header p br {
+        display: none;
+    }
+
+    #cards-header h2 {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        color: hsl(260, 8%, 14%);
+        /* Very Dark Violet */
+        margin-bottom: 10px;
+    }
+
+    #cards-component {
+        gap: 4rem;
+    }
+
+    #cards-component .card {
+        width: 100%;
+    }
+
+    .--card1,
+    .--card2 {
+        position: static;
+    }
+
+
+    #email-lead {
+        padding: 0 1.2rem 0 1.2rem;
+        background-image: url(/public/images/bg-boost-mobile.svg);
+    }
+
+    #email-lead h3 {
+        font-size: 1.6rem;
+    }
+
+    footer {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 25px;
+        height: auto;
+        padding: 25px 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+    header {
+        padding: 2rem 1.8rem 0 1.8rem;
+    }
+
+    #banner,
+    #section1,
+    #info-group,
+    footer {
+        padding: 0 1.8rem 0 1.8rem;
+    }
+
+    #banner h1 {
+        font-size: 2.2rem;
+        line-height: 35px;
+    }
+
+    #banner p br {
+        display: none;
+    }
+
+    #info-group {
+        height: auto;
+        padding-bottom: 7rem;
+    }
+
+    #shorten-component {
+        position: relative;
+        bottom: 5rem;
+    }
+
+    .link, .link-open {
+        height: auto;
+        padding: 10px 25px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-open div {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+    }
+
+
+    #email-lead {
+        padding: 0 1.2rem 0 1.2rem;
+        background-image: url(/public/images/bg-boost-mobile.svg);
+    }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+    header {
+        padding: 2rem 1.8rem 0 1.8rem;
+    }
+
+    #banner,
+    #section1,
+    #info-group,
+    footer {
+        padding: 0 1.8rem 0 1.8rem;
+    }
+
+    #banner h1 {
+        font-size: 2.2rem;
+        line-height: 35px;
+    }
+
+    #banner p br {
+        display: none;
+    }
+
+    #info-group {
+        height: auto;
+        padding-bottom: 7rem;
+    }
+
+    #shorten-component {
+        position: relative;
+        bottom: 5rem;
+    }
+    .link, .link-open {
+        height: auto;
+        padding: 10px 25px;
+        align-items: center;
+    }
+
+    .link-open div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+    }
+
+    #email-lead {
+        padding: 0 1.2rem 0 1.2rem;
+        background-image: url(/public/images/bg-boost-mobile.svg);
+    }
 }

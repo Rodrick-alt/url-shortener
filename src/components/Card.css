@@ -1,0 +1,38 @@
+#card{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+  padding: 0 25px;
+  background: white;
+}
+#icon{
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: hsl(257, 27%, 26%);
+}
+#icon img{
+  max-width: 25px;
+  height: auto;
+}
+#card h6, #card p{
+  position: relative;
+  bottom: 1rem;
+}
+#card h6{
+  font-size: 1rem;
+  font-weight: bold;
+}
+#card p{
+  font-size: .9rem;
+  line-height: 20px;
+  color: hsl(257, 7%, 63%); /*Grayish Violet*/
+}
