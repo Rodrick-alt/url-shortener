@@ -16,7 +16,7 @@ function App() {
       <header>
         <div className='nav'>
           <ul>
-            <li id='nav-title'><a href='#'>Shortly</a></li>
+            <li id='nav-title'><a href='#page-wrapper'>Shortly</a></li>
             <li className='nav-item'>Features</li>
             <li className='nav-item'>Pricing</li>
             <li className='nav-item'>Resources</li>
@@ -99,7 +99,7 @@ function App() {
       </div>
 
       <footer>
-        <h4 id='footer-title'><a href='#'>Shortly</a></h4>
+        <h4 id='footer-title'><a href='#page-wrapper'>Shortly</a></h4>
 
         <div className='footer-links'>
           <p>Features</p>
