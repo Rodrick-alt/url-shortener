@@ -3,6 +3,11 @@ import Shorten from './components/Shorten';
 import Card from './components/Card';
 import Menu from './components/mobileMenu';
 import './App.css';
+import banImg from './images/illustration-working.svg';
+import icon1 from './images/icon-brand-recognition.svg';
+import icon2 from './images/icon-detailed-records.svg';
+import icon3 from './images/icon-fully-customizable.svg';
+
 
 function App() {
   const [menuStyle, setMenuStyle] = useState('menu');
@@ -45,7 +50,7 @@ function App() {
             </p>
             <button>Get Started</button>
           </div>
-          <img src='././images/illustration-working.svg'
+          <img src={banImg}
             alt='banner' id='banner-img' />
         </div>
 
@@ -64,21 +69,21 @@ function App() {
 
             <div id='cards-component'>
               <div className='card'>
-                <Card icon='././images/icon-brand-recognition.svg'
+                <Card icon={icon1}
                   title='Brand Recognition'
                   paragraph="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content." />
               </div>
 
               <div className='card --card1'>
                 <Card
-                  icon='././images/icon-detailed-records.svg'
+                  icon={icon2}
                   title='Detailed Records'
                   paragraph="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions." />
               </div>
 
               <div className='card --card2'>
                 <Card
-                  icon='././images/icon-fully-customizable.svg'
+                  icon={icon3}
                   title='Fully Customizable'
                   paragraph="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement." />
               </div>

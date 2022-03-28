@@ -73,7 +73,7 @@ main {
 /* Button trigger effect */
 button:active {
     transition: .3s ease-out;
-    transform: scale(.85);
+    transform: scale(.90);
 }
 
 

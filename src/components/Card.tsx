@@ -7,7 +7,7 @@ function Card(props: any) {
       <div id='icon'>
         <img src={props.icon} alt="" />
       </div>
-      <h6>{props.title}</h6>
+      <h3>{props.title}</h3>
       <p>{props.paragraph}</p>
     </div>
   )
