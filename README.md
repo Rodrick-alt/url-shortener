@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/images/Screenshot.png)
+![](./src/images/Screenshot.png)
 
 ### Built with
 
@@ -44,6 +44,3 @@ window.onload = () => {
 ### Useful resources
 
 - [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) - This gave me an overview on the sessionStorage property and how to manipulate it.
-
-## Author
-- Frontend Mentor - [Rodrick](https://www.frontendmentor.io/profile/Rodrick-alt)
