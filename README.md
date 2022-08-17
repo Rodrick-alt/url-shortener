@@ -24,6 +24,7 @@ Users should be able to:
 - Flexbox
 - Typescript
 - [React](https://reactjs.org/) - JS library
+- [shrtcode](https://app.shrtco.de/) - shrtcode API
 
 ### What I learned
 - How to use browser session storage.
@@ -44,6 +45,3 @@ window.onload = () => {
 ### Useful resources
 
 - [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) - This gave me an overview on the sessionStorage property and how to manipulate it.
-
-## Author
-- Frontend Mentor - [Rodrick](https://www.frontendmentor.io/profile/Rodrick-alt)

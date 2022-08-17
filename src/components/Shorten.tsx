@@ -12,12 +12,11 @@ function Shorten() {
   let [url, setURL] = useState(['https://www.frontendmentor.io', 'https://rel.ink/gxOXp9', 'link']);
   let [url1, setURL1] = useState(['https://www.frontendmentor.io', 'https://rel.ink/gxOXp9', 'link']);
   let [url2, setURL2] = useState(['https://www.frontendmentor.io', 'https://rel.ink/gxOXp9', 'link']);
-  //Form Input retrieval.
+
   const [formInput, setFormInput] = useState('');
+  const [loadingStyle, setLoadStyle] = useState('loading-done');
   //Keep track of # 0f history links being displayed.
   const [count, setCount] = useState(0);
-  // Loading style
-  const [loadingStyle, setLoadStyle] = useState('loading-done');
 
   // retrieving variable from last temp sessionstorage (if any). 
   window.onload = () => {
@@ -75,7 +74,7 @@ function Shorten() {
 
   ///display form response to user, stores form response and user input. 
   function handleResponse(response) {
-    // alert("Success, server responded with: " + response);
+
     const obj = JSON.parse(response);
 
     switch (count) {
@@ -125,7 +124,6 @@ function Shorten() {
       sessionStorage.setItem("url2_input", `${url2[0]}`);
       sessionStorage.setItem("url2_shorten", `${url2[1]}`);
       sessionStorage.setItem("url2_style", `${url2[2]}`);
-
     }
   }
 
