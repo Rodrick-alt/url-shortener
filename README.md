@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/images/Screenshot.png)
+![](./src/images/Screenshot.png)
 
 ### Built with
 
