@@ -13,24 +13,27 @@ function App() {
   const [menuStyle, setMenuStyle] = useState('menu');
   return (
     <div id="page-wrapper">
+      <div id='top' />
       <header>
         <div className='nav'>
           <ul>
-            <li id='nav-title'><a href='#page-wrapper'>Shortly</a></li>
+            <li id='nav-title'><a href='#top'>Shortly</a></li>
             <li className='nav-item'>Features</li>
             <li className='nav-item'>Pricing</li>
             <li className='nav-item'>Resources</li>
           </ul>
         </div>
         <div className='nav'>
-          <button id='mobile-menu' onClick={() => {
+          <button id='mobile-menu' title='mobile-menu' onClick={() => {
             if (menuStyle === 'menu') {
               setMenuStyle('menu-open')
             } else {
               setMenuStyle('menu')
             }
-          }}><svg xmlns="http://www.w3.org/2000/svg"
-            width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg></button>
+          }}>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg>
+          </button>
           <ul>
             <li className='nav-item'><button>Login</button></li>
             <li id='nav-btn'><button>Sign Up</button></li>
@@ -99,7 +102,7 @@ function App() {
       </div>
 
       <footer>
-        <h4 id='footer-title'><a href='#page-wrapper'>Shortly</a></h4>
+        <h4 id='footer-title'><a href='#top'>Shortly</a></h4>
 
         <div className='footer-links'>
           <p>Features</p>

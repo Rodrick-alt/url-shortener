@@ -47,7 +47,7 @@ main {
 
 /* No hover effects on touch ***********************************/
 @media (hover: hover) and (pointer: fine) {
-    .nav-item:hover {
+    .nav-item:hover, .nav-item button:hover {
         color: hsl(260, 8%, 14%);
     }
 
@@ -69,13 +69,6 @@ main {
     }
 
 }
-
-/* Button trigger effect */
-button:active {
-    transition: .3s ease-out;
-    transform: scale(.90);
-}
-
 
 /* MOBILE FIRST ******************************************************* */
 header {

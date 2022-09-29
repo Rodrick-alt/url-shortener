@@ -197,7 +197,6 @@ function Shorten() {
               className={btn2} id='btn-2'>Copy</button>
           </div>
         </div>
-
       </div>
     </div>
   )
