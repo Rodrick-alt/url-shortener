@@ -79,8 +79,8 @@ form button {
   height: 3.5rem;
   border-radius: 5px;
   background: white;
-  padding: 0 15px;
-  gap: 10px;
+  padding: 0 1rem;
+  gap: 1rem 2rem;
 }
 .link-open{
   display: flex;
@@ -99,7 +99,7 @@ form button {
   justify-content: center;
   align-items: center;
   width: auto;
-  gap: 5px;
+  gap: 2rem;
   
 }
 

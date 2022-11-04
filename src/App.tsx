@@ -13,11 +13,10 @@ function App() {
   const [menuStyle, setMenuStyle] = useState('menu');
   return (
     <div id="page-wrapper">
-      <div id='top' />
       <header>
         <div className='nav'>
           <ul>
-            <li id='nav-title'><a href='#top'>Shortly</a></li>
+            <li id='nav-title'>Shortly</li>
             <li className='nav-item'>Features</li>
             <li className='nav-item'>Pricing</li>
             <li className='nav-item'>Resources</li>
@@ -102,7 +101,15 @@ function App() {
       </div>
 
       <footer>
-        <h4 id='footer-title'><a href='#top'>Shortly</a></h4>
+        <div id='footer-title'>
+          <button onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+          }}>Shortly</button>
+        </div>
 
         <div className='footer-links'>
           <p>Features</p>

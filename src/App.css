@@ -122,7 +122,6 @@ a {
 #footer-title {
     font-size: 2.2rem;
     font-weight: bolder;
-    cursor: pointer;
 }
 
 .nav-item,
@@ -313,7 +312,17 @@ footer>* {
 #footer-title {
     flex-grow: 4;
 }
-
+#footer-title button{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    text-align: left;
+    width: auto;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
 .footer-links p {
     font-weight: bold;
 }
